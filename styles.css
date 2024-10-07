@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #347aeb;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+section {
+    margin: 20px auto;
+    padding: 20px;
+    text-align: justify;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+}
+.info {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+.keynote, .agenda {
+    margin-top: 20px;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.keynote h2, .agenda h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+.footer {
+    background-color: #347aeb;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* Cooperation section container to keep images aligned and centered */
+.cooperation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adds some space between images */
+    margin-top: 20px;
+}
+
+/* Style for cooperation images */
+.cooperation-item img {
+    max-width: 120px; /* Set a maximum width for the logos */
+    width: 100%;
+    height: auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .cooperation-item img {
+        max-width: 80px; /* Reduce logo size on small screens */
+    }
+}
+
+/* @media (max-width: 600px) {
+    .keynote h2, .agenda h2 {
+        font-size: 1.2em;
+    }
+    .footer {
+        padding: 8px;
+    }
+} */
