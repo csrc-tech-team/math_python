@@ -1,82 +1,171 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
+
+/* Header */
 header {
     background-color: #347aeb;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px;
     text-align: center;
 }
+
 header h1 {
     margin: 0;
+    font-size: 2em;
 }
+
+/* Section */
 section {
     margin: 20px auto;
     padding: 20px;
-    text-align: justify;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 90%;
-    max-width: 800px;
+    max-width: 1000px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Info Paragraphs */
 .info {
     font-size: 1.1em;
     margin-bottom: 20px;
+    line-height: 1.6;
 }
-.keynote, .agenda {
-    margin-top: 20px;
-}
-.center {
-    margin-left: auto;
-    margin-right: auto;
-}
-.keynote h2, .agenda h2 {
-    font-size: 1.5em;
-    color: #333;
-}
-.footer {
-    background-color: #347aeb;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
-/* Cooperation section container to keep images aligned and centered */
+
+/* Cooperation Section */
 .cooperation {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Adds some space between images */
+    gap: 40px;
     margin-top: 20px;
 }
 
-/* Style for cooperation images */
+.cooperation-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .cooperation-item img {
-    max-width: 120px; /* Set a maximum width for the logos */
+    max-width: 150px;
     width: 100%;
     height: auto;
 }
 
-/* Mobile adjustments */
-@media (max-width: 600px) {
+/* Registration, Keynote, and Agenda Sections */
+.registration, .keynote, .agenda {
+    margin-top: 40px;
+}
+
+.registration h2, .keynote h2, .agenda h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Keynote Speakers */
+.keynote ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.keynote li {
+    margin-bottom: 20px;
+}
+
+.keynote li b {
+    font-size: 1.1em;
+}
+
+.keynote li i {
+    color: #555;
+}
+
+/* Workshop Schedule */
+.agenda .day-schedule {
+    margin-bottom: 30px;
+}
+
+.agenda h3 {
+    font-size: 1.5em;
+    color: #347aeb;
+    margin-bottom: 10px;
+}
+
+.agenda ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.agenda li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #347aeb;
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .registration h2, .keynote h2, .agenda h2 {
+        font-size: 1.6em;
+    }
+
     .cooperation-item img {
-        max-width: 80px; /* Reduce logo size on small screens */
+        max-width: 120px;
     }
 }
 
-/* @media (max-width: 600px) {
-    .keynote h2, .agenda h2 {
-        font-size: 1.2em;
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
     }
-    .footer {
-        padding: 8px;
+
+    .info {
+        font-size: 1em;
     }
-} */
+
+    .registration h2, .keynote h2, .agenda h2 {
+        font-size: 1.4em;
+    }
+
+    .agenda h3 {
+        font-size: 1.3em;
+    }
+
+    .cooperation-item img {
+        max-width: 100px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
