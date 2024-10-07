@@ -28,6 +28,7 @@ section {
     width: 90%;
     max-width: 1000px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 /* Info Paragraphs */
@@ -43,20 +44,24 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 20px; /* Space between items */
     margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .cooperation-item {
+    flex: 1 1 150px; /* Allows flexibility */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .cooperation-item img {
-    max-width: 150px;
     width: 100%;
     height: auto;
+    max-width: 150px; /* Default max-width for larger screens */
+    object-fit: contain;
 }
 
 /* Registration, Keynote, and Agenda Sections */
@@ -162,7 +167,7 @@ img {
     }
 
     .cooperation-item img {
-        max-width: 100px;
+        max-width: 80px;
     }
 
     footer {
