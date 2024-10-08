@@ -1,3 +1,8 @@
+/* Global Box Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
@@ -28,7 +33,6 @@ section {
     width: 90%;
     max-width: 1000px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
 }
 
 /* Info Paragraphs */
@@ -41,17 +45,17 @@ section {
 /* Cooperation Section */
 .cooperation {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Prevent wrapping */
     justify-content: center;
     align-items: center;
     gap: 20px; /* Space between items */
     margin-top: 20px;
-    padding: 10px;
-    box-sizing: border-box;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    padding-bottom: 10px; /* Optional: space at the bottom */
 }
 
 .cooperation-item {
-    flex: 1 1 150px; /* Allows flexibility */
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,6 +66,12 @@ section {
     height: auto;
     max-width: 150px; /* Default max-width for larger screens */
     object-fit: contain;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Logos */
+.cooperation-item img:hover {
+    transform: scale(1.05);
 }
 
 /* Registration, Keynote, and Agenda Sections */
