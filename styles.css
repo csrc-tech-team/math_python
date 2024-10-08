@@ -73,37 +73,52 @@ section {
     transform: scale(1.05);
 }
 
+/* Schedule Table */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.schedule-table th {
+    background-color: #e6e2da;
+    color: #333;
+    font-weight: bold;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.schedule-table tr:hover {
+    background-color: #f1f1f1;
+}
+
 /* Registration, Keynote, and Agenda Sections */
-.registration, .keynote, .agenda {
+.registration, .keynote, .agenda, .scientific-committee {
     margin-top: 40px;
 }
 
-.registration h2, .keynote h2, .agenda h2 {
+.registration h2, .keynote h2, .agenda h2, .scientific-committee h2 {
     font-size: 1.8em;
     color: #333;
     margin-bottom: 20px;
 }
 
 /* Keynote Speakers */
-.keynote ul {
+.keynote ul, .scientific-committee ul {
     list-style-type: none;
     padding: 0;
 }
 
-.keynote2 ul {
-    padding: 0;
-}
-
-.keynote li {
-    margin-bottom: 20px;
-}
-
-.keynote li b {
-    font-size: 1.1em;
-}
-
-.keynote li i {
-    color: #555;
+.keynote li, .scientific-committee li {
+    margin-bottom: 10px;
 }
 
 /* Workshop Schedule */
@@ -124,6 +139,16 @@ section {
 
 .agenda li {
     margin-bottom: 8px;
+}
+
+/* Scientific Committee List */
+.scientific-committee ul {
+    padding-left: 20px;
+}
+
+.scientific-committee li {
+    list-style-type: disc;
+    margin-left: 20px;
 }
 
 /* Footer */
@@ -153,12 +178,12 @@ img {
         font-size: 1.8em;
     }
 
-    .registration h2, .keynote h2, .agenda h2 {
+    .registration h2, .keynote h2, .agenda h2, .scientific-committee h2 {
         font-size: 1.6em;
     }
 
     .cooperation-item {
-        flex: 1 1 120px; /* Reduce flex-basis for medium screens */
+        flex: 1 1 120px; /* Adjust flex-basis for medium screens */
     }
 
     .cooperation-item img {
@@ -175,7 +200,7 @@ img {
         font-size: 1em;
     }
 
-    .registration h2, .keynote h2, .agenda h2 {
+    .registration h2, .keynote h2, .agenda h2, .scientific-committee h2 {
         font-size: 1.4em;
     }
 
@@ -184,7 +209,7 @@ img {
     }
 
     .cooperation-item {
-        flex: 1 1 80px; /* Further reduce flex-basis for small screens */
+        flex: 1 1 80px; /* Further adjust flex-basis for small screens */
     }
 
     .cooperation-item img {
