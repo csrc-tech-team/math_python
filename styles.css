@@ -45,20 +45,19 @@ section {
 /* Cooperation Section */
 .cooperation {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: wrap; /* Allow wrapping to next lines */
     justify-content: center;
     align-items: center;
     gap: 20px; /* Space between items */
     margin-top: 20px;
-    overflow-x: auto; /* Enable horizontal scrolling if needed */
-    padding-bottom: 10px; /* Optional: space at the bottom */
 }
 
 .cooperation-item {
-    flex: 0 0 auto; /* Prevent flex items from shrinking */
+    flex: 1 1 150px; /* Flex-grow: 1; Flex-shrink: 1; Flex-basis: 150px */
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 .cooperation-item img {
@@ -154,8 +153,12 @@ img {
         font-size: 1.6em;
     }
 
+    .cooperation-item {
+        flex: 1 1 120px; /* Reduce flex-basis for medium screens */
+    }
+
     .cooperation-item img {
-        max-width: 120px;
+        max-width: 120px; /* Reduce logo size */
     }
 }
 
@@ -176,8 +179,12 @@ img {
         font-size: 1.3em;
     }
 
+    .cooperation-item {
+        flex: 1 1 80px; /* Further reduce flex-basis for small screens */
+    }
+
     .cooperation-item img {
-        max-width: 80px;
+        max-width: 80px; /* Further reduce logo size */
     }
 
     footer {
